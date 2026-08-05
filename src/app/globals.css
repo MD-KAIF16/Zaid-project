@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pch-ink: #101512;
+  --color-pch-paper: #F3EFE5;
+  --color-pch-[#FAF8F2]: #FAF8F2;
+  --color-pch-forest: #173C2D;
+  --color-pch-olive: #697B58;
+  --color-pch-stone: #D8D0C1;
+  --color-pch-brass: #A88B55;
+  --color-pch-text: #1A1E1B;
+  --color-pch-muted: #686D68;
+
+  --font-serif: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-sans-body), 'Manrope', 'Inter', sans-serif;
+  --font-hindi: var(--font-devanagari), 'Noto Sans Devanagari', sans-serif;
+}
+
+:root {
+  --background: #FAF8F2;
+  --foreground: #1A1E1B;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Minimal Editorial Rules */
+.editorial-line {
+  height: 1px;
+  background-color: #D8D0C1;
+}
+
+.editorial-line-dark {
+  height: 1px;
+  background-color: rgba(250, 248, 242, 0.12);
+}
+
+.pb-mobile-bar {
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  .pb-mobile-bar {
+    padding-bottom: 0rem;
+  }
+}
