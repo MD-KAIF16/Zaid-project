@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import { X, Phone, MessageCircle } from "lucide-react";
+import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BUSINESS } from "@/constants/business";
 import { Button } from "@/components/ui/Button";
 import { createWhatsAppUrl, createCallUrl } from "@/lib/whatsapp";
+import { PchLogo } from "@/components/ui/PchLogo";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -35,14 +36,7 @@ export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
           >
             <div>
               <div className="flex items-center justify-between border-b border-[#D8D0C1] pb-4 mb-6">
-                <div>
-                  <span className="font-serif text-sm block text-[#1A1E1B]">
-                    {BUSINESS.name}
-                  </span>
-                  <span className="text-xs text-[#686D68] block">
-                    {BUSINESS.hindiName}
-                  </span>
-                </div>
+                <PchLogo />
 
                 <button
                   onClick={onClose}
